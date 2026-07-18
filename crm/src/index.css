@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/*
+  Club Valma brand tokens — sourced from .claude/skills/club-valma-brand.
+  Status/chart colors are functional UI colors layered on top (not brand
+  identity) and are documented in src/theme.js.
+*/
+@theme {
+  --font-sans: "Maven Pro", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-light: #01a3e5;
+  --color-brand-dark: #004791;
+  --color-accent-light: #a0d05e;
+  --color-accent-dark: #41b153;
+
+  --color-text-body: #555555;
+  --color-text-dark: #333333;
+  --color-text-muted: #898781;
+
+  --color-surface-tint: #f9fafc;
+  --color-surface-gray: #eeeeee;
+  --color-border-gray: #dddddd;
+
+  --shadow-card: 2.828px 2.828px 15px 0px rgba(0, 0, 0, 0.1);
+
+  /* Status palette — reserved for state, never reused as a chart series color */
+  --color-status-good-bg: #ecfdf5;
+  --color-status-good-text: #047857;
+  --color-status-good-dot: #41b153;
+
+  --color-status-warn-bg: #fffbeb;
+  --color-status-warn-text: #b45309;
+  --color-status-warn-dot: #f59e0b;
+
+  --color-status-neutral-bg: #f3f4f6;
+  --color-status-neutral-text: #6b7280;
+  --color-status-neutral-dot: #9ca3af;
+
+  /* Reserved for hard-stop states (pago vencido) — deliberately more alarming
+     than warn, and never used for chart series or brand accents */
+  --color-status-critical-bg: #fef2f2;
+  --color-status-critical-text: #b91c1c;
+  --color-status-critical-dot: #ef4444;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* tabular figures for numeric table/axis columns, per data-viz guidance */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
